@@ -11,9 +11,22 @@
         </div>
         <div class="row justify-content-center mt-5">
             <div class="col-lg-6 col-md-8">
+                <h3>leave your email down below and I will reach out</h3>
                 <form action="{% url 'contact' %}" method="post">
                     {% csrf_token %}
-                    {{ form }}
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">email will not be shared with anyone else.</div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text">Optional message</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
                     <input class="btn btn-primary mt-3" type="submit">
                 </form>  
             </div>
