@@ -11,28 +11,46 @@
         </div>
         <div class="row justify-content-center mt-5">
             <div class="col-lg-6 col-md-8">
-                <h3>leave your email down below and I will reach out</h3>
-                <form action="{% url 'contact' %}" method="post">
-                    {% csrf_token %}
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">email will not be shared with anyone else.</div>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-text">Optional message</span>
-                        <textarea class="form-control" aria-label="With textarea"></textarea>
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <input class="btn btn-primary mt-3" type="submit">
-                </form>  
+                <div class="card shadow-sm p-4">
+                    <h3 class="mb-3">Leave your email and I will reach out</h3>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Optional message</label>
+                            <textarea class="form-control" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+                </div>
             </div>
-                
         </div>
-            
+        <section class="row justify-content-center mt-3">
+            <div class="col-lg-6 col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Get in Touch</h5>
+                        <ul class="list-unstyled text-start">
+                            <li class="mb-2">
+                                <i class="bi bi-envelope-fill me-2 text-primary"></i> 
+                                Email: <a href="mailto:your.email@example.com">mosemuthoni57@gmail.com</a>
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-phone-fill me-2 text-success"></i> 
+                                Phone: (555) 123-4567
+                            </li>
+                            <li>
+                                <i class="bi bi-geo-alt-fill me-2 text-danger"></i> 
+                                Location: City, Country
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
         
     

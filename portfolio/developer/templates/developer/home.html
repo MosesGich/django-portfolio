@@ -6,7 +6,7 @@
         <div class="hero-txt">
             <h1 class="display-3 fw-bold">Moses Gichohi Portfolio</h1>
             <p>Web developer, Python and JavaScript</p>
-            <button class="btn btn-primary btn-lg"><a class="mybio" href=" {% url 'about' %}" style="text-decoration: none; color: white;">Contact Me</a></button>
+            <button class="btn btn-primary btn-lg"><a class="mybio" href=" {% url 'contact' %}">Contact Me</a></button>
         </div>
     </div>
     <div class="container">
@@ -37,5 +37,16 @@
                 </div>
             </div>
         </div>
+        
+    </div>
+    <div class="row">
+            <footer class="bg-dark py-5 mt-5">
+                <div class="container text-light text-center">
+                    <p class="display-5 mb-5">Check me out</p>
+                    <a class="mybio" href=" {% url 'about' %}" style="text-decoration: none; color: white;"><button class="btn btn-primary btn-lg mx-3">My Profile</button></a>
+                    <a class="mybio" href=" {% url 'contact' %}" style="text-decoration: none; color: white;"><button class="btn btn-primary btn-lg">Contact Me</button></a>
+
+                </div>
+            </footer>
     </div>
 {% endblock %}
