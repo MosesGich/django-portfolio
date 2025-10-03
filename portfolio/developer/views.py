@@ -1,4 +1,9 @@
+from django import forms
 from django.shortcuts import render
+from django.http import HttpResponse
+
+class NewForm(forms.Form):
+    email = forms.CharField(label="Email")
 
 # Create your views here.
 def index(request):
@@ -6,3 +11,10 @@ def index(request):
 
 def about(request):
     return render(request,"developer/about.html")
+
+def contact(request):
+    if request.method == "POST":
+        return HttpResponse("Thankyou")
+    return render(request, "developer/contact.html", {
+        "form": NewForm()
+    })

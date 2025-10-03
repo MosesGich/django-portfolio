@@ -4,10 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'developer/style.css' %}">
     <title>Document</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body mb-3" data-bs-theme="dark">
+          <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">Bio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <a class="nav-link text-light fs-4" href="https://github.com/MosesGich" target="_blank" aria-label="Github">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a class="nav-link text-light fs-4" href="" target="_blank" aria-label="Twitter/X">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a class="nav-link text-light fs-4" href="" target="_blank" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    
+                </div>
+        </div>
+    </nav>
     {% block body %}
 
     {% endblock %}
